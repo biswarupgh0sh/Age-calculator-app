@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+
+$purple: hsl(259, 100%, 65%);
+$lightRed: hsl(0, 100%, 67%);
+$white: hsl(0, 0%, 100%);
+$offWhite: hsl(0, 0%, 94%);
+$lightGrey: hsl(0, 0%, 86%);
+$smokeyGrey: hsl(0, 1%, 44%);
+$offBlack: hsl(0, 0%, 8%);
+$poppins: "Poppins", sans-serif;
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  display: grid;
+  min-height: 100vh;
+  background-color: $offWhite;
+  font-family: $poppins;
+
+  .container {
+    place-self: center;
+    background-color: $white;
+    min-width: 30vw;
+    min-height: 53vh;
+    border-radius: 15px 15px 150px 15px;
+    position: relative;
+    padding: 50px;
+
+    .input-grid {
+      display: flex;
+      gap: 15px;
+      border-bottom: 1px solid $lightGrey;
+      padding-bottom: 50px;
+      margin-bottom: 50px;
+      .input-container {
+        small{
+          color: hsl(0, 100%, 67%);
+          font-style: italic;
+          display: block;
+          padding-bottom: 0.5rem;
+        }
+        .little {
+          display: block;
+          font-weight: 400;
+          color: $smokeyGrey;
+          font-size: 12px;
+          margin-bottom: 7px;
+          letter-spacing: 3px;
+        }
+        input {
+          width: 90px;
+          height: 30px;
+          border-radius: 3px;
+          margin-right: 4px;
+          border: 1px solid $lightGrey;
+          padding-left: 11px;
+          padding-top: 5px;
+          font-size: 20px;
+          font-weight: 700;
+
+          &:focus {
+            border: 1px solid $purple;
+          }
+
+          &::placeholder {
+            font-size: 20px;
+            font-weight: 700;
+            color: $smokeyGrey;
+          }
+        }
+      }
+    }
+    #btn {
+      position: absolute;
+      background-color: $purple;
+      border-radius: 50%;
+      border: none;
+      outline: none;
+      padding: 15px;
+      right: 40px;
+      top: 125px;
+      z-index: 1;
+
+      &:active {
+        background-color: $offBlack;
+      }
+    }
+    .output {
+      font-weight: 800;
+      font-style: italic;
+      font-size: 20px;
+      h1 {
+        span {
+          color: $purple;
+          letter-spacing: 4px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 375px) and (max-width: 425px) and (min-height: 600px) {
+  body {
+    .container {
+      margin-top: 55px;
+      width: 300px;
+      padding: 35px 20px 5px;
+      border-radius: 17px 17px 80px 17px;;
+      .input-grid {
+        gap: 5px;
+        .input-container {
+          input {
+            width: 70px;
+          }
+        }
+      }
+
+      .btn {
+        right: 145px;
+        top: 123px;
+        img{
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 375px) and (max-width: 435px) and (max-height: 1080px){
+  body{
+    .container{
+      padding: 35px 20px 5px;
+      width: 300px;
+      margin-bottom: 200px;
+      .input-grid{
+        gap: 5px;
+        .input-container{
+          input{
+            width: 70px;
+          }
+        }
+      }
+      .btn{
+        right: 145px;
+        top: 123px;
+        img{
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 400px) and (max-width: 575px) and (max-height: 900px) {
+  body {
+    .container {
+      padding: 35px 20px 5px;
+      width: 300px;
+      margin-bottom: 200px;
+      .input-grid{
+        gap: 5px;
+        .input-container{
+          input{
+            width: 70px;
+          }
+        }
+      }
+      .btn{
+        right: 145px;
+        top: 123px;
+        img{
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}
+
